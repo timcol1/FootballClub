@@ -15,7 +15,7 @@ public class MainController {
     }
     @GetMapping("/table")
     public String table(Model model) {
-        model.addAttribute("title", "Таблиця ігор команди");
+        model.addAttribute("table", "Таблиця ігор команди");
         return "table-team";
     }
 
