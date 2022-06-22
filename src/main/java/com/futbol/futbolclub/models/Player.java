@@ -6,12 +6,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Players {
+public class Player {
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
         private Long id;
 
-        private String name,description;
+        private String name,description,picture;
+
+        public String getPicture() {
+                return picture;
+        }
+
+        public void setPicture(String picture) {
+                this.picture = picture;
+        }
 
         public Long getId() {
                 return id;
@@ -35,5 +43,14 @@ public class Players {
 
         public void setDescription(String description) {
                 this.description = description;
+        }
+
+        public Player() {
+        }
+
+        public Player(String name,  String picture,String description) {
+                this.name = name;
+                this.description = description;
+                this.picture = picture;
         }
 }
